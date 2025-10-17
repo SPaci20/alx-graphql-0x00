@@ -1,8 +1,8 @@
 # Character GraphQL Queries
 
-This repository contains GraphQL queries to fetch character information from the Rick and Morty API using specific character IDs.
+This repository contains GraphQL queries to fetch character information from the Rick and Morty API.
 
-## Files
+## Single Character Queries
 
 - `character-id-1.graphql` - Query for character with ID 1
 - `character-id-1-output.json` - Expected output for character ID 1
@@ -13,11 +13,27 @@ This repository contains GraphQL queries to fetch character information from the
 - `character-id-4.graphql` - Query for character with ID 4
 - `character-id-4-output.json` - Expected output for character ID 4
 
+## Paginated Characters Queries
+
+- `characters-page-1.graphql` - Query for characters page 1
+- `characters-page-1-output.json` - Expected output for page 1
+- `characters-page-2.graphql` - Query for characters page 2
+- `characters-page-2-output.json` - Expected output for page 2
+- `characters-page-3.graphql` - Query for characters page 3
+- `characters-page-3-output.json` - Expected output for page 3
+- `characters-page-4.graphql` - Query for characters page 4
+- `characters-page-4-output.json` - Expected output for page 4
+
 ## Query Structure
 
-All queries follow the same structure:
+### Single Character Query
 - Use the `character(id: ID!)` field
 - Request the following fields: `id`, `name`, `status`, `species`, `type`, `gender`
+
+### Paginated Characters Query
+- Use the `characters(page: Int)` field
+- Request pagination info: `count`, `pages`, `next`, `prev`
+- Request character fields: `id`, `name`, `status`, `image`
 
 ## How to Execute
 
